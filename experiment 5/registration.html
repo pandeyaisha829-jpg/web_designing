@@ -1,0 +1,66 @@
+<html>
+<head><title>Registration Form</title></head>
+<body bgcolor="#E4F0F8">
+<center><font color="blue" size="6" face="arial">Registration Form</font></center><br />
+<form action="right.html">
+First Name (Minimum 6 characters) <font color="red">
+</font>
+<input type='text' id='firstname' /><br /><br />
+Last Name<font color="red"><font color="red">
+</font> </font> &nbsp;&nbsp;&nbsp;
+<input type='text' id='lastname' /><br /><br />
+EmailAddress<font color="red">
+</font> &nbsp;&nbsp;&nbsp;
+<input type='text' id='email' /><br />
+<font color="red">(one e-mail id only):</font> &nbsp;&nbsp;&nbsp;
+<font color="redblue">e.g. sky246@gmail.com</font><br /><br/>
+Date of Birth<font color="red"></font> &nbsp;&nbsp;&nbsp;
+<select id="day">
+<option value="">Day</option>
+<!-- Days 1 to 31 -->
+<script>
+for(let i=1; i<=31; i++) {
+    document.write('<option value="'+i+'">'+i+'</option>');
+}
+</script>
+</select>
+<select id="month">
+<option value="">Month</option>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select id="year">
+<option value="">Year</option>
+<!-- Years from 1950 to 2026 -->
+<script>
+for(let i=2026; i>=1950; i--) {
+    document.write('<option value="'+i+'">'+i+'</option>');
+}
+</script>
+</select><br /><br />
+Password (minimum 6 characters) <font color="red">
+</font> &nbsp;&nbsp;&nbsp;
+<input type='password' id='pass'><br /><br/>
+Address<font color="red">
+</font> &nbsp;&nbsp;&nbsp;
+<textarea rows="2" cols="20" id='addr'></textarea> <br /> <br/>
+Mobile No<font color="red">
+</font> &nbsp;&nbsp;&nbsp;
+<input type='text' id='mobileno' /><br />
+Gender: <input type='radio' name="gender">male
+<input type='radio' name="gender">female<br/><br />
+<input type='Submit' value='submit' />
+<input type='Reset' value='reset' />
+</form>
+</body>
+</html>

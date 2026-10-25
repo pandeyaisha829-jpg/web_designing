@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>CSS background-repeat and Link Styles</title>
+<style type="text/css">
+body
+{
+background-color: lightyellow;
+font-family: Cambria, serif;
+font-size: 16px;
+}
+h1
+{
+font-family: "Brush Script MT", cursive;
+font-size: 44px;
+color: green;
+text-align: center;
+}
+h2
+{
+font-family: Arial, sans-serif;
+color: maroon;
+}
+.box
+{
+width: 450px;
+height: 150px;
+border: 2px solid black;
+padding: 10px;
+margin-bottom: 15px;
+background-image: url("C:\\Users\\akash\\OneDrive\\Documents\\wd\\logo.jpg");
+background-color: white;
+font-weight: bold;
+}
+#repeat { background-repeat: repeat; }
+#repeatx { background-repeat: repeat-x; }
+#repeaty { background-repeat: repeat-y; }
+#norepeat { background-repeat: no-repeat; }
+
+a:link
+{
+color: blue;
+text-decoration: none;
+font-size: 20px;
+}
+a:visited
+{
+color: purple;
+text-decoration: none;
+font-size: 20px;
+}
+a:hover
+{
+color: red;
+text-decoration: underline;
+background-color: yellow;
+font-size: 24px;
+}
+a:active
+{
+color: green;
+text-decoration: underline overline;
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<h1>CSS background-repeat &amp; Link Styles</h1>
+<h2>1) The background-repeat property</h2>
+<div class="box" id="repeat">background-repeat: repeat (both directions) </div>
+<div class="box" id="repeatx">background-repeat: repeat-x (horizontal only)</div>
+<div class="box" id="repeaty">background-repeat: repeat-y (vertical only)</div>
+<div class="box" id="norepeat">background-repeat: no-repeat (shown once)</div>
+<h2>2) Styles for links</h2>
+<table border="1" cellspacing="0" cellpadding="8">
+<tr>
+<th>Pseudo-class</th>
+<th>Meaning</th>
+<th>Style Applied</th>
+</tr>
+<tr>
+<td>A:link</td>
+<td>Normal, unvisited link</td>
+<td>Blue, no underline</td>
+</tr>
+<tr>
+<td>A:visited</td>
+<td>Link already visited by the user</td>
+<td>Purple, no underline</td>
+</tr>
+<tr>
+<td>A:hover</td>
+<td>Mouse pointer is over the link</td>
+<td>Red, underline, yellow background</td>
+</tr>
+<tr>
+<td>A:active</td>
+<td>Link at the moment it is clicked</td>
+<td>Green, underline overline</td>
+</tr>
+</table>
+<br>
+<p>Try the links below:</p>
+<a href="home.html">HOME</a> &nbsp;&nbsp;&nbsp;
+<a href="login.html">LOGIN</a> &nbsp;&nbsp;&nbsp;
+<a href="registration.html">REGISTER</a> &nbsp;&nbsp;&nbsp;
+<a href="catalogue.html">CATALOGUE</a> &nbsp;&nbsp;&nbsp;
+<a href="cart.html">CART</a>
+</body>
+</html>

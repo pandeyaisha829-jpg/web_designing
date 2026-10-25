@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>CSS Fonts, Styles and Background Image</title>
+<style type="text/css">
+body
+{
+background-image: url("C:\\Users\\akash\\OneDrive\\Documents\\wd\\bg.jpg");
+font-family: Cambria, serif;
+font-size: 16px;
+color: navy;
+}
+h1
+{
+font-family: "Brush Script MT", cursive;
+font-size: 48px;
+color: green;
+text-align: center;
+text-decoration: underline;
+}
+h2
+{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 28px;
+color: red;
+font-style: italic;
+}
+.fancy
+{
+font-family: "Times New Roman", serif;
+font-size: 20px;
+font-weight: bold;
+font-style: italic;
+color: purple;
+letter-spacing: 2px;
+}
+.plain
+{
+font-family: Verdana, Geneva, sans-serif;
+font-size: 14px;
+color: black;
+line-height: 24px;
+text-align: justify;
+}
+#special
+{
+font-family: "Courier New", monospace;
+font-size: 18px;
+color: white;
+background-color: darkblue;
+padding: 10px;
+text-transform: uppercase;
+}
+#box
+{
+background-image: url("C:\\Users\\akash\\OneDrive\\Documents\\wd\\books.jpg");
+background-color: lightcyan;
+width: 500px;
+height: 200px;
+padding: 15px;
+border: 3px solid maroon;
+color: black;
+font-weight: bold;
+}
+table.demo
+{
+border: 2px solid black;
+border-collapse: collapse;
+background-color: lightyellow;
+}
+table.demo td, table.demo th
+{
+border: 1px solid black;
+padding: 8px;
+font-family: Georgia, serif;
+}
+table.demo th
+{
+background-color: yellowgreen;
+color: white;
+}
+</style>
+</head>
+<body>
+<h1>CSS Cascading Style Sheets</h1>
+<h2>1) Different fonts and styles</h2>
+<p class="fancy">This paragraph uses the class selector ".fancy" (Times New Roman, bold, italic, purple).</p>
+<p class="plain">This paragraph uses the class selector ".plain" (Verdana, 14px, line-height 24px, justified). In the style definition we define how each selector should work (font, color etc.). Then, in the body of the page, we refer to these selectors to activate the styles.</p>
+<p id="special">This paragraph uses the ID selector "#special" (Courier New, uppercase, white text on dark blue).</p>
+<br>
+<table class="demo">
+<tr>
+<th>Selector</th>
+<th>Type</th>
+<th>Property Used</th>
+</tr>
+<tr>
+<td>h1, h2</td>
+<td>Element selector</td>
+<td>font-family, color, font-size</td>
+</tr>
+<tr>
+<td>.fancy, .plain</td>
+<td>Class selector</td>
+<td>font-style, font-weight, line-height</td>
+</tr>
+<tr>
+<td>#special, #box</td>
+<td>ID selector</td>
+<td>text-transform, background-image</td>
+</tr>
+</table>
+<h2>2) Background image for a single element</h2>
+<div id="box">
+This box (div with id="box") has its own background image, different from the background image of the whole page.
+</div>
+</body>
+</html>

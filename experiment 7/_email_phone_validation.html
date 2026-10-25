@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>Registration Form JS Validation (Email & Phone)</title>
+<script language="javascript">
+function validate()
+{
+var email = document.f1.email.value;
+var phone = document.f1.phone.value;
+var emailPattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z]{2,})+$/;
+var phonePattern = /^[0-9]{10}$/;
+// E-mail validation
+if (email == "")
+{
+    alert("E-mail id should not be empty");
+    document.f1.email.focus();
+    return false;
+}
+if (!emailPattern.test(email))
+{
+    alert("Invalid E-mail id. Please follow the pattern name@domain.com");
+    document.f1.email.focus();
+    return false;
+}
+// Phone number validation
+if (phone == "")
+{
+    alert("Phone number should not be empty");
+    document.f1.phone.focus();
+    return false;
+}
+if (!phonePattern.test(phone))
+{
+    alert("Phone number should contain 10 digits only");
+    document.f1.phone.focus();
+    return false;
+}
+alert("E-mail id and Phone number are valid!");
+return true;
+}
+</script>
+</head>
+<body bgcolor="#E4F0F8">
+<center><font color="blue" size="6" face="arial">Registration Form</font></center><br />
+<form name="f1" method="post" action="right.html" onsubmit="return validate()">
+<table align="center" cellspacing="10">
+<tr>
+<td><b>Name</b></td>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<td><b>Password</b></td>
+<td><input type="password" name="pass"></td>
+</tr>
+<tr>
+<td><b>E-mail id</b><font color="red">*</font></td>
+<td><input type="text" name="email"> <font color="red" size="2">e.g. name@domain.com</font></td>
+</tr>
+<tr>
+<td><b>Phone Number</b><font color="red">*</font></td>
+<td><input type="text" name="phone" maxlength="10"> <font color="red" size="2">(10 digits only)</font></td>
+</tr>
+<tr>
+<td><b>Sex</b></td>
+<td>
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female
+</td>
+</tr>
+<tr>
+<td><b>Date of Birth</b></td>
+<td>
+<select name="day">
+<option value="">Day</option>
+<script>
+for (let i=1; i<=31; i++) {
+    document.write('<option value="' + i + '">'+i+ '</option>');
+}
+</script>
+</select>
+<select name="month">
+<option value="">Month</option>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select name="year">
+<option value="">Year</option>
+<script>
+for (let i=2026; i>=1950; i--) {
+    document.write('<option value="' + i + '">'+i+ '</option>');
+}
+</script>
+</select>
+</td>
+</tr>
+<tr>
+<td><b>Languages Known</b></td>
+<td>
+<input type="checkbox" name="lang" value="English">English
+<input type="checkbox" name="lang" value="Telugu">Telugu
+<input type="checkbox" name="lang" value="Hindi">Hindi
+<input type="checkbox" name="lang" value="Tamil">Tamil
+</td>
+</tr>
+<tr>
+<td><b>Address</b></td>
+<td><textarea rows="3" cols="25" name="addr"></textarea></td>
+</tr>
+<tr align="center">
+<td><input type="submit" value="Submit"></td>
+<td><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
